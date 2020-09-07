@@ -32,7 +32,7 @@ class SeaArcrank(models.Model):
     purviews = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_arcrank'
 
 
@@ -42,7 +42,7 @@ class SeaBuy(models.Model):
     kptime = models.IntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_buy'
 
 
@@ -55,7 +55,7 @@ class SeaCck(models.Model):
     status = models.CharField(max_length=1)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_cck'
 
 
@@ -65,7 +65,7 @@ class SeaCoCls(models.Model):
     cotype = models.IntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_co_cls'
 
 
@@ -77,7 +77,7 @@ class SeaCoConfig(models.Model):
     cotype = models.IntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_co_config'
 
 
@@ -116,7 +116,7 @@ class SeaCoData(models.Model):
     v_downdata = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_co_data'
 
 
@@ -133,7 +133,7 @@ class SeaCoFilters(models.Model):
     cotype = models.IntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_co_filters'
 
 
@@ -155,7 +155,7 @@ class SeaCoNews(models.Model):
     n_entitle = models.CharField(max_length=100, blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_co_news'
 
 
@@ -178,7 +178,7 @@ class SeaCoType(models.Model):
     cotype = models.IntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_co_type'
 
 
@@ -193,7 +193,7 @@ class SeaCoUrl(models.Model):
     cotype = models.IntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_co_url'
 
 
@@ -214,7 +214,7 @@ class SeaComment(models.Model):
     vote = models.PositiveIntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_comment'
 
 
@@ -224,7 +224,7 @@ class SeaContent(models.Model):
     body = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_content'
 
 
@@ -234,7 +234,7 @@ class SeaCount(models.Model):
     updatetime = models.CharField(max_length=50, blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_count'
 
 
@@ -252,7 +252,7 @@ class SeaCrons(models.Model):
     minute = models.CharField(max_length=36)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_crons'
 
 
@@ -310,7 +310,7 @@ class SeaData(models.Model):
     v_longtxt = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_data'
 
 
@@ -323,7 +323,7 @@ class SeaErradd(models.Model):
     sendtime = models.PositiveIntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_erradd'
 
 
@@ -333,7 +333,7 @@ class SeaFavorite(models.Model):
     kptime = models.IntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_favorite'
 
 
@@ -349,7 +349,7 @@ class SeaFlink(models.Model):
     ischeck = models.SmallIntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_flink'
 
 
@@ -365,7 +365,7 @@ class SeaGuestbook(models.Model):
     msg = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_guestbook'
 
 
@@ -374,7 +374,7 @@ class SeaIe(models.Model):
     addtime = models.DateTimeField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_ie'
 
 
@@ -385,7 +385,7 @@ class SeaJqtype(models.Model):
     ishidden = models.SmallIntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_jqtype'
 
 
@@ -408,7 +408,7 @@ class SeaMember(models.Model):
     msgstate = models.CharField(max_length=2)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_member'
 
 
@@ -421,7 +421,7 @@ class SeaMemberGroup(models.Model):
     g_authvalue = models.IntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_member_group'
 
 
@@ -434,7 +434,7 @@ class SeaMyad(models.Model):
     adsbody = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_myad'
 
 
@@ -446,7 +446,7 @@ class SeaMytag(models.Model):
     tagcontent = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_mytag'
 
 
@@ -477,7 +477,7 @@ class SeaNews(models.Model):
     n_content = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_news'
 
 
@@ -488,7 +488,7 @@ class SeaPlaydata(models.Model):
     body1 = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_playdata'
 
 
@@ -502,7 +502,7 @@ class SeaSearchKeywords(models.Model):
     tid = models.PositiveSmallIntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_search_keywords'
 
 
@@ -513,7 +513,7 @@ class SeaTags(models.Model):
     vids = models.TextField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_tags'
 
 
@@ -536,7 +536,7 @@ class SeaTemp(models.Model):
     v_lang = models.CharField(max_length=200, blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_temp'
 
 
@@ -552,7 +552,7 @@ class SeaTopic(models.Model):
     keyword = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_topic'
 
 
@@ -573,7 +573,7 @@ class SeaType(models.Model):
     tptype = models.SmallIntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_type'
 
 
@@ -584,5 +584,5 @@ class SeaZyk(models.Model):
     zinfo = models.CharField(max_length=255)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sea_zyk'

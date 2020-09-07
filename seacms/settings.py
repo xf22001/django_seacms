@@ -76,12 +76,14 @@ WSGI_APPLICATION = 'seacms.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': '10.0.0.3',
-        'PORT': 3306,
-        'USER': 'seacms',
-        'PASSWORD': 'xf22001',
-        'NAME': 'seacms_web'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'ENGINE': 'django.db.backends.mysql',
+        #'HOST': '10.0.0.3',
+        #'PORT': 3306,
+        #'USER': 'seacms',
+        #'PASSWORD': 'xf22001',
+        #'NAME': 'seacms_web'
     }
 }
 
@@ -174,17 +176,15 @@ LOGGING = {
 			'level': 'DEBUG',
 			#'propagate': True,
 		},
-        'django.db.backends': {
-            'handlers': ['console'],
-            'propagate': True,
-            'level':'DEBUG',
-        },
+        #'django.db.backends': {
+        #    'handlers': ['console'],
+        #    'propagate': True,
+        #    'level':'DEBUG',
+        #},
 	},
 }
 
 if os.environ.get('UWSGI_ORIGINAL_PROC_NAME'):
     WEBSOCKET_FACTORY_CLASS = 'dwebsocket.backends.uwsgi.factory.uWsgiWebSocketFactory'
-    print('use uwsgi')
 else:
     WEBSOCKET_FACTORY_CLASS = 'dwebsocket.backends.default.factory.WebSocketFactory'
-    print('use dws')
