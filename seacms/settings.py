@@ -55,7 +55,7 @@ ROOT_URLCONF = 'seacms.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['fe'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,6 +127,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Add for vuejs
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "fe/static"),
+]
 
 LOGGING = {
 	'version': 1,
